@@ -14,9 +14,10 @@ const tutorials = [
 const titleCased = () => {
   
   const part1 = tutorials.map((words) => words.split(" "));
-
+// splits words in each sentence into seperate parts of each object within array
   const part2 = part1.map(words => words.map((word) => word.charAt(0).toUpperCase() + word.slice(1)))
-  
+  // takes split words and replaces first letter with a capital letter at the start of each word
   const part3 = part2.map((sentences) => sentences.join(" "));
+  // combines all of the now capitalized words into sentences again
   return part3
 }
